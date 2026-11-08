@@ -28,20 +28,18 @@ body{font-family:'DM Sans',system-ui,sans-serif;color:var(--forest);background:v
 .h-lg{font-size:clamp(2.1rem,5vw,3.7rem);line-height:1.06;letter-spacing:-.015em}
 .blk{display:inline-block;padding:0 .2em .06em;border-radius:.16em;transform:rotate(-1.5deg)}
 .wavy{text-decoration:underline wavy var(--coral);text-decoration-thickness:.06em;text-underline-offset:.16em}
-.hero{background:radial-gradient(38% 45% at 94% 4%,var(--peach-l),transparent 72%),#fff}
-.line{display:block;width:fit-content;opacity:0;transform:translateY(20px);animation:up .8s cubic-bezier(.2,.7,.2,1) forwards}
+.hero{background:radial-gradient(38% 45% at 94% 4%,var(--peach-l) 0%, transparent 70%);background-color:#fff;}.line{display:block;width:fit-content;opacity:0;transform:translateY(20px)}
+.hero.go .line{animation:up .8s cubic-bezier(.2,.7,.2,1) forwards}
 .line:nth-child(2){animation-delay:.15s}.line:nth-child(3){animation-delay:.3s}
 @keyframes up{to{opacity:1;transform:none}}
-.arch{position:relative;aspect-ratio:4/5;border-radius:999px 999px 36px 36px;background:linear-gradient(160deg,var(--peach),#fff);overflow:hidden;display:grid;place-items:center;box-shadow:0 30px 60px -28px rgba(59,10,28,.5)}
+.arch{position:relative;aspect-ratio:4/4.2;border-radius:999px 999px 36px 36px;background:linear-gradient(160deg,var(--peach),#fff);overflow:hidden;display:grid;place-items:center;box-shadow:0 30px 60px -28px rgba(59,10,28,.5);isolation:isolate;}
 .arch span{font-size:6rem;color:#fff}
-.arch img,.pol img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.ring{position:absolute;inset:0;border:2px solid var(--coral);border-radius:999px 999px 36px 36px;transform:translate(18px,18px);z-index:-1}
-.mq{overflow:hidden;background:var(--forest);padding:1.1rem 0}
+.arch img,.pol img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center top;}
 .mq>div{display:flex;gap:14px;width:max-content;animation:mq 45s linear infinite}
 .mq span{padding:.55rem 1.4rem;border-radius:99px;white-space:nowrap;font-weight:500;background:var(--peach-l);color:var(--forest)}
 .mq span:nth-child(3n){background:var(--coral);color:#fff}.mq span:nth-child(3n+1){background:var(--peach)}
 @keyframes mq{to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.line{animation:none;opacity:1;transform:none}.mq>div{animation:none}html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:reduce){.hero .line,.hero.go .line{animation:none;opacity:1;transform:none}.mq>div{animation:none}html{scroll-behavior:auto}}
 .pol{position:relative;height:clamp(250px,36vw,390px)}
 .pol figure{position:absolute;width:64%;background:#fff;padding:10px 10px 38px;border-radius:6px;box-shadow:0 20px 40px -18px rgba(59,10,28,.55);transition:transform .35s}
 .pol figure:first-child{left:0;top:7%;transform:rotate(-4deg)}
@@ -59,11 +57,15 @@ body{font-family:'DM Sans',system-ui,sans-serif;color:var(--forest);background:v
 .cur-ring{width:38px;height:38px;margin:-19px 0 0 -19px;border:1.5px solid var(--coral);transition:width .25s,height .25s,margin .25s,background .25s}
 .cur-ring.big{width:66px;height:66px;margin:-33px 0 0 -33px;background:rgba(215,38,61,.12)}
 body.has-cur,body.has-cur a,body.has-cur button{cursor:none}
+#hdr{transition:opacity .4s}#hdr.hid{opacity:0;pointer-events:none}
+.intro{margin-top:-4rem;min-height:100svh;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;padding:5rem 1.25rem 4rem}
+.wm{font-family:'DM Serif Display',Georgia,serif;color:var(--leaf);font-size:clamp(3.6rem,15vw,10.5rem);line-height:.9;letter-spacing:-.01em;text-transform:uppercase}
 </style>
+<noscript><style>.line{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
 
-<header class="sticky top-0 z-50 backdrop-blur-md" style="background:rgba(255,255,255,.88)">
+<header id="hdr" class="sticky top-0 z-50 backdrop-blur-md" style="background:rgba(255,255,255,.88)">
   <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between gap-4">
     <a href="#top" class="leading-tight">
       <span class="serif block text-xl" style="color:var(--leaf)">Bleona Hitaj</span>
@@ -79,7 +81,14 @@ body.has-cur,body.has-cur a,body.has-cur button{cursor:none}
 </header>
 
 <main id="top">
-<section class="hero">
+<section id="intro" class="intro">
+  <div class="relative">
+    <p class="wm">Bleona<br>Hitaj</p>
+    <p class="mt-8 text-lg md:text-xl font-medium">WooCommerce & E-commerce Specialist</p>
+    <p class="mt-3 max-w-md mx-auto opacity-75">I help online stores sell more, rank higher on Google and run without technical headaches.</p>
+  </div>
+</section>
+<section id="hero" class="hero">
   <div class="max-w-6xl mx-auto px-5 pt-14 pb-24 md:pt-20 grid md:grid-cols-[1.25fr_1fr] gap-16 items-center">
     <div>
       <h1 class="serif h-xl">
@@ -219,7 +228,6 @@ body.has-cur,body.has-cur a,body.has-cur button{cursor:none}
     <div class="max-w-6xl mx-auto px-5 py-6 flex flex-wrap justify-between gap-3 text-sm opacity-70">
       <span>© 2026 Bleona Hitaj</span>
       <span class="flex gap-6">
-        <a href="https://github.com/BleonaDev" target="_blank" rel="noopener" class="hover:text-white">GitHub</a>
         <a href="https://www.linkedin.com/in/bleona-hitaj/" target="_blank" rel="noopener" class="hover:text-white">LinkedIn</a>
       </span>
     </div>
@@ -235,6 +243,10 @@ addEventListener('mousemove',e=>{x=e.clientX;y=e.clientY;d.style.opacity=g.style
 document.addEventListener('mouseleave',()=>{d.style.opacity=g.style.opacity=0});
 (function f(){rx+=(x-rx)*.16;ry+=(y-ry)*.16;g.style.transform='translate('+rx+'px,'+ry+'px)';requestAnimationFrame(f)})();
 document.addEventListener('mouseover',e=>g.classList.toggle('big',!!e.target.closest('a,button,.pol figure')));
-}</script>
+}
+const hero=document.getElementById('hero'),hdr=document.getElementById('hdr'),intro=document.getElementById('intro');
+new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)hero.classList.add('go')}),{threshold:.25}).observe(hero);
+new IntersectionObserver(e=>e.forEach(x=>hdr.classList.toggle('hid',x.intersectionRatio>.55)),{threshold:[0,.55,1]}).observe(intro);
+</script>
 </body>
 </html>
