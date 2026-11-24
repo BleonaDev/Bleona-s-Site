@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bleona Hitaj | WooCommerce & E-commerce Specialist</title>
 <meta name="description" content="Freelance WooCommerce specialist helping online store owners increase conversions, build loyalty systems and rank higher on Google.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23d7263d'/%3E%3Ctext x='32' y='42' font-size='28' text-anchor='middle' fill='white' font-family='Georgia' font-weight='700'%3EBH%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%233b0a1c'/%3E%3Ctext x='32' y='42' font-size='28' text-anchor='middle' fill='white' font-family='Georgia' font-weight='700'%3EBH%3C/text%3E%3C/svg%3E">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Bleona Hitaj | WooCommerce & E-commerce Specialist">
@@ -18,10 +18,6 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&family=Caveat:wght@600&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
- html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
 :root{--forest:#3b0a1c;--leaf:#b3122f;--coral:#d7263d;--peach-l:#fde4ea;--peach:#f8bfce;--ivory:#ffffff;--green:#178a52}
 html{scroll-behavior:smooth;scroll-padding-top:5rem}
 body{font-family:'DM Sans',system-ui,sans-serif;color:var(--forest);background:var(--ivory);-webkit-font-smoothing:antialiased}
@@ -32,13 +28,16 @@ body{font-family:'DM Sans',system-ui,sans-serif;color:var(--forest);background:v
 .h-lg{font-size:clamp(2.1rem,5vw,3.7rem);line-height:1.06;letter-spacing:-.015em}
 .blk{display:inline-block;padding:0 .2em .06em;border-radius:.16em;transform:rotate(-1.5deg)}
 .wavy{text-decoration:underline wavy var(--coral);text-decoration-thickness:.06em;text-underline-offset:.16em}
-.hero{background:radial-gradient(38% 45% at 94% 4%,var(--peach-l) 0%, transparent 70%);background-color:#fff;}.line{display:block;width:fit-content;opacity:0;transform:translateY(20px)}
+.hero{background:radial-gradient(38% 45% at 94% 4%,var(--peach-l),transparent 72%),#fff}
+.line{display:block;width:fit-content;opacity:0;transform:translateY(20px)}
 .hero.go .line{animation:up .8s cubic-bezier(.2,.7,.2,1) forwards}
 .line:nth-child(2){animation-delay:.15s}.line:nth-child(3){animation-delay:.3s}
 @keyframes up{to{opacity:1;transform:none}}
-.arch{position:relative;aspect-ratio:4/4.2;border-radius:999px 999px 36px 36px;background:linear-gradient(160deg,var(--peach),#fff);overflow:hidden;display:grid;place-items:center;box-shadow:0 30px 60px -28px rgba(59,10,28,.5)}
+.arch{position:relative;aspect-ratio:4/5;border-radius:999px 999px 36px 36px;background:linear-gradient(160deg,var(--peach),#fff);overflow:hidden;display:grid;place-items:center;box-shadow:0 30px 60px -28px rgba(59,10,28,.5)}
 .arch span{font-size:6rem;color:#fff}
-.arch img,.pol img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center top;}
+.arch img,.pol img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ring{position:absolute;inset:0;border:2px solid var(--coral);border-radius:999px 999px 36px 36px;transform:translate(18px,18px);z-index:-1}
+.mq{overflow:hidden;background:var(--forest);padding:1.1rem 0}
 .mq>div{display:flex;gap:14px;width:max-content;animation:mq 45s linear infinite}
 .mq span{padding:.55rem 1.4rem;border-radius:99px;white-space:nowrap;font-weight:500;background:var(--peach-l);color:var(--forest)}
 .mq span:nth-child(3n){background:var(--coral);color:#fff}.mq span:nth-child(3n+1){background:var(--peach)}
@@ -61,9 +60,15 @@ body{font-family:'DM Sans',system-ui,sans-serif;color:var(--forest);background:v
 .cur-ring{width:38px;height:38px;margin:-19px 0 0 -19px;border:1.5px solid var(--coral);transition:width .25s,height .25s,margin .25s,background .25s}
 .cur-ring.big{width:66px;height:66px;margin:-33px 0 0 -33px;background:rgba(215,38,61,.12)}
 body.has-cur,body.has-cur a,body.has-cur button{cursor:none}
+.cs{border-radius:28px;padding:1.5rem;display:flex;flex-direction:column;gap:.5rem;overflow:hidden}
+.cs .mk{margin-bottom:.75rem;pointer-events:none}.cs h3{font-family:'DM Serif Display',Georgia,serif;font-size:1.6rem;line-height:1.1}.cs p:not(.mk *){opacity:.85;line-height:1.5}
+.pm{display:inline-block;border-radius:99px;padding:.28rem .85rem;font-size:.72rem;font-weight:700}
 #hdr{transition:opacity .4s}#hdr.hid{opacity:0;pointer-events:none}
 .intro{margin-top:-4rem;min-height:100svh;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;padding:5rem 1.25rem 4rem}
 .wm{font-family:'DM Serif Display',Georgia,serif;color:var(--leaf);font-size:clamp(3.6rem,15vw,10.5rem);line-height:.9;letter-spacing:-.01em;text-transform:uppercase}
+.pola{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.pola:hover{transform:rotate(0) scale(1.04)!important;box-shadow:0 34px 60px -24px rgba(59,10,28,.55)!important}
+.tape{position:absolute;top:-14px;left:50%;width:120px;height:30px;margin-left:-60px;background:rgba(248,191,206,.85);transform:rotate(-3deg);border-radius:3px;box-shadow:0 2px 6px rgba(59,10,28,.12)}
 </style>
 <noscript><style>.line{opacity:1!important;transform:none!important}</style></noscript>
 </head>
@@ -73,12 +78,13 @@ body.has-cur,body.has-cur a,body.has-cur button{cursor:none}
   <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between gap-4">
     <a href="#top" class="leading-tight">
       <span class="serif block text-xl" style="color:var(--leaf)">Bleona Hitaj</span>
-      <span class="block text-xs opacity-70">E-commerce Specialist</span>
+      <span class="block text-xs opacity-70">E-commerce & WooCommerce Specialist</span>
     </a>
     <nav class="hidden md:flex gap-9 text-sm font-medium">
-      <a href="#about" class="hover:text-[var(--leaf)]">About</a>
-      <a href="#case-study" class="hover:text-[var(--leaf)]">Case Study</a>
-      <a href="#services" class="hover:text-[var(--leaf)]">Services</a>
+      <a href="#about" class="hover:text-[var(--coral)]">About</a>
+      <a href="#case-study" class="hover:text-[var(--coral)]">Case Study</a>
+      <a href="#services" class="hover:text-[var(--coral)]">Services</a>
+      <a href="https://www.instagram.com/bleonadigitalstudio/" target="_blank" rel="noopener" class="hover:text-[var(--coral)]">Instagram</a>
     </nav>
     <a href="https://wa.me/355685491587" target="_blank" rel="noopener" class="btn text-white text-sm !py-2.5 !px-5" style="background:var(--green)">WhatsApp Me</a>
   </div>
@@ -88,8 +94,8 @@ body.has-cur,body.has-cur a,body.has-cur button{cursor:none}
 <section id="intro" class="intro">
   <div class="relative">
     <p class="wm">Bleona<br>Hitaj</p>
-    <p class="mt-8 text-lg md:text-xl font-medium">E-commerce Specialist & SEO</p>
-    <p class="mt-3 max-w-md mx-auto opacity-75">I help online stores optimize their site, sell more, and rank higher on Google.</p>
+    <p class="mt-8 text-lg md:text-xl font-medium">WooCommerce & E-commerce Specialist</p>
+    <p class="mt-3 max-w-md mx-auto opacity-75">I help online stores sell more, rank higher on Google and run without technical headaches.</p>
   </div>
 </section>
 <section id="hero" class="hero">
@@ -100,10 +106,11 @@ body.has-cur,body.has-cur a,body.has-cur button{cursor:none}
         <span class="line mt-3"><span class="wavy">I optimize stores.</span></span>
         <span class="line mt-3"><span class="blk" style="background:var(--forest);color:#fff;transform:rotate(1.2deg)">I bring customers.</span></span>
       </h1>
-      <p class="mt-9 text-lg max-w-md leading-relaxed opacity-85">I help online store owners increase sales, build customer loyalty systems, and rank higher on Google, without technical burdens.</p>
+      <p class="mt-9 text-lg max-w-md leading-relaxed opacity-85">I help WooCommerce and online store owners increase conversions, build customer loyalty systems, and rank higher on Google, without technical headaches.</p>
       <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
         <a class="btn text-white" style="background:var(--forest)" target="_blank" rel="noopener" href="https://wa.me/355685491587?text=Hi%20Bleona%2C%20I%27d%20like%20a%20free%20store%20audit.%20My%20store%20link%20is%3A%20">Book a Free Store Audit</a>
-        <a href="#case-study" class="font-bold underline underline-offset-4 decoration-2 hover:text-[var(--leaf)]">See Real Results ↓</a>
+        <a href="#case-study" class="font-bold underline underline-offset-4 decoration-2 hover:text-[var(--coral)]">See Real Results ↓</a>
+        <p class="hand basis-full text-2xl" style="color:var(--leaf);transform:rotate(-1.5deg)">Send me your store link and get 2 free fixes in 24 hours</p>
       </div>
     </div>
     <div class="relative max-w-sm md:max-w-none w-full mx-auto">
@@ -119,99 +126,155 @@ body.has-cur,body.has-cur a,body.has-cur button{cursor:none}
 </section>
 
 <div class="mq" aria-hidden="true"><div>
-  <span>WooCommerce</span><span>Loyalty points</span><span>Technical SEO</span><span>WhatsApp ordering</span><span>Bulk uploads</span><span>Bestseller badges</span><span>Checkout fixes</span><span>Store care</span>
+  <span>WooCommerce</span><span>Email marketing</span><span>Loyalty points</span><span>Technical SEO</span><span>Black Friday campaigns</span><span>WhatsApp ordering</span><span>Bulk uploads</span><span>Bestseller badges</span><span>Checkout fixes</span><span>Store care</span>
 </div></div>
 
-<section id="case-study" class="max-w-6xl mx-auto px-5 py-24">
-  <h2 class="serif h-lg max-w-3xl">Featured Work: <span class="blk" style="background:var(--coral);color:#fff">Babylicious</span></h2>
-  <p class="mt-5 text-lg max-w-2xl opacity-80">How I helped a baby & kids website enhance modern features and increase sales.</p>
+<section id="case-study" class="max-w-6xl mx-auto px-5 py-16">
+  <h2 class="serif h-lg max-w-3xl">Featured Work: <span class="blk text-white" style="background:var(--coral)">Babylicious</span></h2>
+  <p class="mt-4 text-lg max-w-2xl opacity-80">How I transformed a WooCommerce baby & kids store into a high-converting sales store.</p>
 
-  <div class="mt-16 space-y-24">
-    <article class="flex flex-col md:flex-row items-center gap-12">
-      <div class="pol md:w-1/2 w-full">
-        <figure><div><img src="images/loyalty-before.jpg" alt="Store before the loyalty system" onerror="this.remove()"></div><figcaption class="hand"></figcaption></figure>
-        <figure><div><img src="images/loyalty-after.jpg" alt="Loyalty points widget “Pikët e Mia”" onerror="this.remove()"></div><figcaption class="hand"></figcaption></figure>
+  <div class="mt-10 grid gap-5 md:grid-cols-2">
+    <article class="md:col-span-2 rounded-[28px] overflow-hidden grid md:grid-cols-2 items-center" style="background:var(--forest);color:var(--peach-l)">
+      <div class="p-8 md:p-10">
+        <span class="pm text-white" style="background:var(--coral)">New · Email Marketing</span>
+        <h3 class="serif text-3xl md:text-4xl text-white mt-4 leading-tight">Black Friday email campaign</h3>
+        <p class="mt-3 opacity-85">A signup popup on the store and a branded email for the Black Friday deals.</p>
+        <div class="mt-8 grid grid-cols-3 gap-4">
+          <div><p class="serif text-4xl text-white">101</p><p class="text-sm mt-1 opacity-85">new subscribers in 3 days</p></div>
+          <div><p class="serif text-4xl" style="color:var(--peach)">9×</p><p class="text-sm mt-1 opacity-85">more sales on day one</p></div>
+          <div><p class="serif text-4xl text-white">+126%</p><p class="text-sm mt-1 opacity-85">November sales vs. last year</p></div>
+        </div>
       </div>
-      <div class="md:w-1/2">
-        <h3 class="serif text-3xl md:text-4xl">Loyalty Points System (“Pikët e Mia”)</h3>
-        <p class="mt-4 text-lg leading-relaxed opacity-85 max-w-md">Implemented an automated earn and redeem points system on the site to boost repeat orders and customer retention.</p>
+      <div class="p-6 md:p-8 flex gap-4 justify-center items-start" style="background:#eef3ef">
+        <img src="images/email-popup.jpg" alt="Black Friday signup popup on Babylicious" loading="lazy" class="rounded-2xl shadow-lg" style="width:38%;max-height:340px;object-fit:cover;object-position:top">
+        <img src="images/email-campaign.jpg" alt="Babylicious Black Friday campaign email" loading="lazy" class="rounded-2xl shadow-lg" style="width:55%;max-height:340px;object-fit:cover;object-position:top">
       </div>
     </article>
 
-    <article class="flex flex-col md:flex-row-reverse items-center gap-12">
-      <div class="pol md:w-1/2 w-full">
-        <figure><div><img src="images/whatsapp-before.jpg" alt="Store before the WhatsApp button" onerror="this.remove()"></div><figcaption class="hand"></figcaption></figure>
-        <figure><div><img src="images/whatsapp-after.jpg" alt="Sticky WhatsApp button on mobile" onerror="this.remove()"></div><figcaption class="hand"></figcaption></figure>
+    <div class="md:col-span-2 flex flex-col md:flex-row items-center gap-10 md:gap-16 py-14" style="border-top:1.5px solid var(--peach)">
+      <figure class="pola relative bg-white shrink-0" style="width:min(100%,540px);padding:14px;border-radius:8px;box-shadow:0 24px 44px -22px rgba(59,10,28,.45);transform:rotate(-2.5deg)">
+        <span class="tape" aria-hidden="true"></span>
+        <div style="background:#eef3ef;border-radius:4px;overflow:hidden"><img src="images/loyalty-points.jpg" alt="Pikët e Mia loyalty points on Babylicious" loading="lazy" style="display:block;width:100%;height:auto"></div>
+      </figure>
+      <div class="max-w-md">
+        <p class="serif leading-none" style="color:var(--coral);font-size:clamp(4rem,8vw,6.5rem)">01</p>
+        <h3 class="serif text-4xl md:text-5xl mt-4 leading-tight">Loyalty points</h3>
+        <p class="mt-4 text-lg md:text-xl opacity-85 leading-relaxed">Customers earn points with every order and redeem them on the next one, so they come back.</p>
       </div>
-      <div class="md:w-1/2">
-        <h3 class="serif text-3xl md:text-4xl">Instant WhatsApp Checkout</h3>
-        <p class="mt-4 text-lg leading-relaxed opacity-85 max-w-md">Integrated a sticky, mobile-first WhatsApp button that lets hesitant buyers ask questions and order in one click.</p>
+    </div>
+    <div class="md:col-span-2 flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16 py-14" style="border-top:1.5px solid var(--peach)">
+      <figure class="pola relative bg-white shrink-0" style="width:min(100%,540px);padding:14px;border-radius:8px;box-shadow:0 24px 44px -22px rgba(59,10,28,.45);transform:rotate(2deg)">
+        <span class="tape" aria-hidden="true"></span>
+        <div class="flex items-center justify-center" style="background:#eef3ef;border-radius:4px;overflow:hidden;height:400px;padding:12px 0"><img src="images/checkout.jpg" alt="New Babylicious checkout on mobile" loading="lazy" style="max-height:100%;max-width:100%;object-fit:contain"></div>
+      </figure>
+      <div class="max-w-md">
+        <p class="serif leading-none" style="color:var(--coral);font-size:clamp(4rem,8vw,6.5rem)">02</p>
+        <h3 class="serif text-4xl md:text-5xl mt-4 leading-tight">A new checkout</h3>
+        <p class="mt-4 text-lg md:text-xl opacity-85 leading-relaxed">Simpler, modern and fully in Albanian, with clear steps from cart to order.</p>
       </div>
-    </article>
-
-    <article class="flex flex-col md:flex-row items-center gap-12">
-      <div class="pol md:w-1/2 w-full">
-        <figure><div><img src="images/seo-before.jpg" alt="Blog before optimization" onerror="this.remove()"></div><figcaption class="hand"></figcaption></figure>
-        <figure><div><img src="images/seo-after.jpg" alt="SEO-optimized product guide" onerror="this.remove()"></div><figcaption class="hand"></figcaption></figure>
+    </div>
+    <div class="md:col-span-2 flex flex-col md:flex-row items-center gap-10 md:gap-16 py-14" style="border-top:1.5px solid var(--peach)">
+      <figure class="pola relative bg-white shrink-0" style="width:min(100%,540px);padding:14px;border-radius:8px;box-shadow:0 24px 44px -22px rgba(59,10,28,.45);transform:rotate(-2deg)">
+        <span class="tape" aria-hidden="true"></span>
+        <div style="background:#eef3ef;border-radius:4px;overflow:hidden"><img src="images/seo-blog.jpg" alt="SEO blog article on Babylicious" loading="lazy" style="display:block;width:100%;height:auto"></div>
+      </figure>
+      <div class="max-w-md">
+        <p class="serif leading-none" style="color:var(--coral);font-size:clamp(4rem,8vw,6.5rem)">03</p>
+        <h3 class="serif text-4xl md:text-5xl mt-4 leading-tight">SEO blog posts</h3>
+        <p class="mt-4 text-lg md:text-xl opacity-85 leading-relaxed">Articles parents search for on Google, bringing new visitors every month without ads.</p>
       </div>
-      <div class="md:w-1/2">
-        <h3 class="serif text-3xl md:text-4xl">SEO-Driven Blog Posts</h3>
-        <p class="mt-4 text-lg leading-relaxed opacity-85 max-w-md">Wrote the store’s blog posts on purpose for SEO: structured headings, meta titles and descriptions, internal links to product pages and Google indexing setup, so each guide can bring free organic traffic.</p>
+    </div>
+    <div class="md:col-span-2 flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16 py-14" style="border-top:1.5px solid var(--peach)">
+      <div class="relative shrink-0" style="width:min(100%,540px);height:300px">
+        <figure class="pola absolute bg-white" style="left:0;top:8%;width:66%;padding:12px 12px 12px;border-radius:8px;box-shadow:0 24px 44px -22px rgba(59,10,28,.45);transform:rotate(-4deg)">
+          <span class="tape" aria-hidden="true"></span>
+          <div style="background:#eef3ef;border-radius:4px;overflow:hidden"><img src="images/whatsapp-before.jpg" alt="WhatsApp button on Babylicious" loading="lazy" style="display:block;width:100%;height:auto"></div>
+        </figure>
+        <figure class="pola absolute bg-white" style="right:0;top:0;width:66%;padding:12px 12px 12px;border-radius:8px;box-shadow:0 24px 44px -22px rgba(59,10,28,.45);transform:rotate(3.5deg)">
+          <span class="tape" aria-hidden="true"></span>
+          <div style="background:#eef3ef;border-radius:4px;overflow:hidden"><img src="images/whatsapp-after.jpg" alt="WhatsApp chat opened from the store" loading="lazy" style="display:block;width:100%;height:auto"></div>
+        </figure>
       </div>
-    </article>
+      <div class="max-w-md">
+        <p class="serif leading-none" style="color:var(--coral);font-size:clamp(4rem,8vw,6.5rem)">04</p>
+        <h3 class="serif text-4xl md:text-5xl mt-4 leading-tight">Instant WhatsApp Checkout</h3>
+        <p class="mt-4 text-lg md:text-xl opacity-85 leading-relaxed">A sticky, mobile-first WhatsApp button that lets hesitant buyers ask questions and order in one click.</p>
+      </div>
+    </div>
+    <div class="md:col-span-2 flex flex-col md:flex-row items-center gap-10 md:gap-16 py-14" style="border-top:1.5px solid var(--peach)">
+      <figure class="pola relative bg-white shrink-0" style="width:min(100%,540px);padding:14px;border-radius:8px;box-shadow:0 24px 44px -22px rgba(59,10,28,.45);transform:rotate(2.5deg)">
+        <span class="tape" aria-hidden="true"></span>
+        <div style="background:#eef3ef;border-radius:4px;overflow:hidden"><img src="images/footer-whatsapp.jpg" alt="New Babylicious footer with Bestseller badges" loading="lazy" style="display:block;width:100%;height:auto"></div>
+      </figure>
+      <div class="max-w-md">
+        <p class="serif leading-none" style="color:var(--coral);font-size:clamp(4rem,8vw,6.5rem)">05</p>
+        <h3 class="serif text-4xl md:text-5xl mt-4 leading-tight">Footer & Bestseller badges</h3>
+        <p class="mt-4 text-lg md:text-xl opacity-85 leading-relaxed">A clearer footer with all the store info, and Bestseller badges that make top products stand out.</p>
+      </div>
+    </div>
   </div>
 
-  <div class="mt-20 rounded-[32px] px-8 py-7 flex flex-wrap items-center justify-between gap-4" style="background:var(--peach-l)">
-    <p class="max-w-xl">Also on the store: bulk product uploads, bestseller badges, checkout updates and layout formatting.</p>
-    <a href="https://babylicious.al" target="_blank" rel="noopener" class="font-bold underline underline-offset-4 decoration-2 hover:text-[var(--leaf)]">Visit the live store</a>
+  <div class="mt-6 flex flex-wrap items-center justify-between gap-3 text-sm opacity-80">
+    <p>Results from WooCommerce Analytics. Real screenshots are in the full case study.</p>
+    <a href="Case_Study_Babylicious.pdf" target="_blank" rel="noopener" class="font-bold underline underline-offset-4 decoration-2 hover:text-[var(--coral)]">Read the full case study (PDF)</a>
+    <a href="https://babylicious.al" target="_blank" rel="noopener" class="font-bold underline underline-offset-4 decoration-2 hover:text-[var(--coral)]">Visit the live store</a>
   </div>
 </section>
 
 <section id="services" class="py-24">
   <div class="max-w-6xl mx-auto px-5">
     <h2 class="serif h-lg">Services & <span class="wavy">Packages</span></h2>
-    <p class="mt-5 text-lg max-w-2xl opacity-80">Clear, transparent solutions tailored for growing online stores.</p>
+    <p class="mt-5 text-lg max-w-2xl opacity-80">Every store is different. I start with a free audit, then send you a clear quote for exactly what your store needs.</p>
 
     <div class="mt-14 grid md:grid-cols-3 gap-7 items-stretch">
       <div class="bg-white border-2 border-[var(--peach)] rounded-[36px] p-8 flex flex-col shadow-[0_24px_50px_-30px_rgba(59,10,28,.5)]">
-        <h3 class="serif text-3xl">Sales & Conversion Boost</h3>
+        <h3 class="serif text-3xl">SEO & Sales Boost</h3>
+        <p class="mt-3 text-sm opacity-60">One-time project</p>
         <ul class="tick mt-6 flex-1">
-          <li>Loyalty points system installation</li>
-          <li>Sticky WhatsApp quick-order button</li>
-          <li>Custom “Bestseller” and urgency product badges</li>
-          <li>Mobile checkout layout fixes</li>
+          <li>3 SEO-optimized blog articles</li>
+          <li>Meta titles, descriptions and Google indexing</li>
+          <li>Internal links to your product pages</li>
+          <li>“Bestseller” and urgency product badges</li>
+          <li>WhatsApp quick-order button</li>
         </ul>
-        <a class="btn mt-8 border-2 hover:text-white" style="border-color:var(--forest)" onmouseover="this.style.background='var(--forest)'" onmouseout="this.style.background=''" target="_blank" rel="noopener" href="https://wa.me/355685491587?text=Hi%20Bleona%2C%20I%27m%20interested%20in%20the%20Sales%20%26%20Conversion%20Boost%20package.">Choose this package</a>
+        <a class="btn mt-8 border-2 hover:text-white" style="border-color:var(--forest)" onmouseover="this.style.background='var(--forest)'" onmouseout="this.style.background=''" target="_blank" rel="noopener" href="https://wa.me/355685491587?text=Hi%20Bleona%2C%20I%20am%20interested%20in%20the%20SEO%20%26%20Sales%20Boost%20package.%20My%20store%20link%20is%3A%20">Get a quote</a>
       </div>
 
       <div class="dark relative rounded-[36px] p-8 flex flex-col md:-translate-y-5 text-[var(--peach-l)]" style="background:var(--forest)">
-        <h3 class="serif text-3xl">SEO & Content Growth</h3>
+        <span class="absolute -top-4 right-7 text-sm font-bold rounded-full px-4 py-1.5" style="background:var(--coral);color:#fff;transform:rotate(4deg)">All in one</span>
+        <h3 class="serif text-3xl text-white">Full Store Growth</h3>
+        <p class="mt-3 text-sm opacity-60">Monthly</p>
         <ul class="tick mt-6 flex-1">
-          <li>3 structured, SEO-optimized blog articles</li>
-          <li>Internal linking to boost product pages</li>
-          <li>Meta titles, descriptions and Google indexing setup</li>
+          <li>Everything in Monthly Store Care</li>
+          <li>New SEO blog articles every month</li>
+          <li>Email marketing: signup popup and campaigns</li>
+          <li>Seasonal campaigns like Black Friday</li>
+          <li>Conversion upgrades: loyalty points, badges, checkout</li>
         </ul>
-        <a class="btn mt-8 bg-white" style="color:var(--forest)" target="_blank" rel="noopener" href="https://wa.me/355685491587?text=Hi%20Bleona%2C%20I%27m%20interested%20in%20the%20SEO%20%26%20Content%20Growth%20package.">Choose this package</a>
+        <a class="btn mt-8 bg-white" style="color:var(--forest)" target="_blank" rel="noopener" href="https://wa.me/355685491587?text=Hi%20Bleona%2C%20I%20am%20interested%20in%20the%20Full%20Store%20Growth%20package.%20My%20store%20link%20is%3A%20">Get a quote</a>
       </div>
 
       <div class="rounded-[36px] p-8 flex flex-col" style="background:var(--peach)">
         <h3 class="serif text-3xl">Monthly Store Care</h3>
+        <p class="mt-3 text-sm opacity-70">Monthly</p>
         <ul class="tick mt-6 flex-1">
           <li>New product uploads and catalog management</li>
-          <li>Weekly plugin and security updates with backups</li>
-          <li>SiteGround and cache speed optimization</li>
-          <li>Custom CSS design tweaks</li>
+          <li>Plugin and security updates with backups</li>
+          <li>Speed and cache optimization</li>
+          <li>Design tweaks and bug fixes</li>
         </ul>
-        <a class="btn mt-8 text-white" style="background:var(--forest)" target="_blank" rel="noopener" href="https://wa.me/355685491587?text=Hi%20Bleona%2C%20I%27m%20interested%20in%20the%20Monthly%20Store%20Care%20package.">Choose this package</a>
+        <a class="btn mt-8 text-white" style="background:var(--forest)" target="_blank" rel="noopener" href="https://wa.me/355685491587?text=Hi%20Bleona%2C%20I%20am%20interested%20in%20the%20Monthly%20Store%20Care%20package.%20My%20store%20link%20is%3A%20">Get a quote</a>
       </div>
     </div>
+
+    <p class="mt-12 text-center text-lg">Not sure what your store needs? <a class="font-bold underline underline-offset-4 decoration-2 hover:text-[var(--coral)]" target="_blank" rel="noopener" href="https://wa.me/355685491587?text=Hi%20Bleona%2C%20I%27d%20like%20a%20free%20store%20audit.%20My%20store%20link%20is%3A%20">Book a free store audit →</a></p>
   </div>
 </section>
 
 <section id="about" class="max-w-6xl mx-auto px-5 py-24 grid md:grid-cols-[1fr_1.5fr] gap-12 items-start">
   <h2 class="serif h-lg">Hi, I’m <span class="blk" style="background:var(--coral);color:#fff">Bleona.</span></h2>
-  <div class="max-w-2xl"><p class="serif text-2xl md:text-[1.7rem] leading-snug">I hold a Bachelor’s degree in Business Informatics and I worked in an enterprise Agile team at Deloitte, building email campaigns in Salesforce Marketing Cloud. Right Now I manage an E-Commerce Website, handling product catalog, plugins, SEO and fixes. Everything I do is focused on reliability, speed and growing your business.</p>
-   </div>
+  <div class="max-w-2xl"><p class="serif text-2xl md:text-[1.7rem] leading-snug">I hold a Bachelor’s degree in Business Informatics and worked in an enterprise Agile team at Deloitte, building email campaigns in Salesforce Marketing Cloud. Today I manage live e-commerce stores, including product catalogs, plugins, SEO, email marketing and fixes. Everything I do is focused on reliability, speed and growing your business.</p>
+    <a href="Case_Study_Babylicious.pdf" target="_blank" rel="noopener" class="btn mt-8 border-2 hover:bg-[var(--forest)] hover:text-white" style="border-color:var(--forest)">Download my Case Study (PDF)</a></div>
 </section>
 
 <section id="contact" class="px-3 sm:px-5 pb-5"><div class="relative overflow-hidden rounded-[40px] text-[var(--peach-l)]" style="background:var(--forest)">
@@ -220,13 +283,14 @@ body.has-cur,body.has-cur a,body.has-cur button{cursor:none}
     <h2 class="serif h-xl max-w-4xl mx-auto">Ready to grow your <span class="blk" style="background:var(--coral);color:#fff">online store?</span></h2>
     <p class="mt-8 text-lg max-w-xl mx-auto opacity-80">Send me your store link on WhatsApp and I will send you 2 free, actionable improvements within 24 hours.</p>
     <a class="btn text-white mt-10 !text-lg !px-9 !py-4" style="background:var(--green)" target="_blank" rel="noopener" href="https://wa.me/355685491587?text=Hi%20Bleona%2C%20here%20is%20my%20store%20link%3A%20">Chat on WhatsApp</a>
-    <p class="mt-6"><a href="mailto:bleona.hitaj98@gmail.com" class="underline underline-offset-4 decoration-2 hover:text-white">bleona.hitaj98@gmail.com</a></p>
+    <p class="mt-6 flex flex-wrap justify-center gap-x-8 gap-y-2"><a href="https://www.instagram.com/bleonadigitalstudio/" target="_blank" rel="noopener" class="underline underline-offset-4 decoration-2 hover:text-white">Instagram: @bleonadigitalstudio</a><a href="mailto:bleona.hitaj98@gmail.com" class="underline underline-offset-4 decoration-2 hover:text-white">bleona.hitaj98@gmail.com</a></p>
     <p class="hand mt-12 text-5xl md:text-6xl text-white" style="transform:rotate(-4deg)">Bleona</p>
   </div>
   <div class="border-t border-white/15">
     <div class="max-w-6xl mx-auto px-5 py-6 flex flex-wrap justify-between gap-3 text-sm opacity-70">
       <span>© 2026 Bleona Hitaj</span>
       <span class="flex gap-6">
+        <a href="https://www.instagram.com/bleonadigitalstudio/" target="_blank" rel="noopener" class="hover:text-white">Instagram</a>
         <a href="https://www.linkedin.com/in/bleona-hitaj/" target="_blank" rel="noopener" class="hover:text-white">LinkedIn</a>
       </span>
     </div>
