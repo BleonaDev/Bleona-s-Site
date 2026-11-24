@@ -20,6 +20,7 @@
 <style>
 :root{--forest:#3b0a1c;--leaf:#b3122f;--coral:#d7263d;--peach-l:#fde4ea;--peach:#f8bfce;--ivory:#ffffff;--green:#178a52}
 html{scroll-behavior:smooth;scroll-padding-top:5rem}
+html,body{max-width:100%;overflow-x:hidden;overflow-x:clip}
 body{font-family:'DM Sans',system-ui,sans-serif;color:var(--forest);background:var(--ivory);-webkit-font-smoothing:antialiased}
 :focus-visible{outline:3px solid var(--leaf);outline-offset:3px}
 .serif{font-family:'DM Serif Display',Georgia,serif;font-weight:400}
@@ -69,6 +70,7 @@ body.has-cur,body.has-cur a,body.has-cur button{cursor:none}
 .pola{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
 .pola:hover{transform:rotate(0) scale(1.04)!important;box-shadow:0 34px 60px -24px rgba(59,10,28,.55)!important}
 .tape{position:absolute;top:-14px;left:50%;width:120px;height:30px;margin-left:-60px;background:rgba(248,191,206,.85);transform:rotate(-3deg);border-radius:3px;box-shadow:0 2px 6px rgba(59,10,28,.12)}
+@media (max-width:767px){.arch,.ring{aspect-ratio:1/1}.arch img{object-position:center 12%}}
 </style>
 <noscript><style>.line{opacity:1!important;transform:none!important}</style></noscript>
 </head>
@@ -137,8 +139,8 @@ body.has-cur,body.has-cur a,body.has-cur button{cursor:none}
     <article class="md:col-span-2 rounded-[28px] overflow-hidden grid md:grid-cols-2 items-center" style="background:var(--forest);color:var(--peach-l)">
       <div class="p-8 md:p-10">
         <span class="pm text-white" style="background:var(--coral)">New · Email Marketing</span>
-        <h3 class="serif text-3xl md:text-4xl text-white mt-4 leading-tight">Black Friday email campaign</h3>
-        <p class="mt-3 opacity-85">A signup popup on the store and a branded email for the Black Friday deals.</p>
+        <h3 class="serif text-3xl md:text-4xl text-white mt-4 leading-tight">Email marketing campaigns</h3>
+        <p class="mt-3 opacity-85">Signup popups that grow your email list and branded emails that sell. Results from the Black Friday campaign:</p>
         <div class="mt-8 grid grid-cols-3 gap-4">
           <div><p class="serif text-4xl text-white">101</p><p class="text-sm mt-1 opacity-85">new subscribers in 3 days</p></div>
           <div><p class="serif text-4xl" style="color:var(--peach)">9×</p><p class="text-sm mt-1 opacity-85">more sales on day one</p></div>
@@ -158,8 +160,8 @@ body.has-cur,body.has-cur a,body.has-cur button{cursor:none}
       </figure>
       <div class="max-w-md">
         <p class="serif leading-none" style="color:var(--coral);font-size:clamp(4rem,8vw,6.5rem)">01</p>
-        <h3 class="serif text-4xl md:text-5xl mt-4 leading-tight">Loyalty points</h3>
-        <p class="mt-4 text-lg md:text-xl opacity-85 leading-relaxed">Customers earn points with every order and redeem them on the next one, so they come back.</p>
+        <h3 class="serif text-4xl md:text-5xl mt-4 leading-tight">Loyalty points systems</h3>
+        <p class="mt-4 text-lg md:text-xl opacity-85 leading-relaxed">Customers earn points with every order and redeem them on the next one, so they keep coming back to your store.</p>
       </div>
     </div>
     <div class="md:col-span-2 flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16 py-14" style="border-top:1.5px solid var(--peach)">
@@ -169,8 +171,8 @@ body.has-cur,body.has-cur a,body.has-cur button{cursor:none}
       </figure>
       <div class="max-w-md">
         <p class="serif leading-none" style="color:var(--coral);font-size:clamp(4rem,8vw,6.5rem)">02</p>
-        <h3 class="serif text-4xl md:text-5xl mt-4 leading-tight">A new checkout</h3>
-        <p class="mt-4 text-lg md:text-xl opacity-85 leading-relaxed">Simpler, modern and fully in Albanian, with clear steps from cart to order.</p>
+        <h3 class="serif text-4xl md:text-5xl mt-4 leading-tight">Checkout optimization</h3>
+        <p class="mt-4 text-lg md:text-xl opacity-85 leading-relaxed">A simple, mobile-first checkout in your customers’ language, with fewer steps from cart to order.</p>
       </div>
     </div>
     <div class="md:col-span-2 flex flex-col md:flex-row items-center gap-10 md:gap-16 py-14" style="border-top:1.5px solid var(--peach)">
@@ -180,36 +182,19 @@ body.has-cur,body.has-cur a,body.has-cur button{cursor:none}
       </figure>
       <div class="max-w-md">
         <p class="serif leading-none" style="color:var(--coral);font-size:clamp(4rem,8vw,6.5rem)">03</p>
-        <h3 class="serif text-4xl md:text-5xl mt-4 leading-tight">SEO blog posts</h3>
-        <p class="mt-4 text-lg md:text-xl opacity-85 leading-relaxed">Articles parents search for on Google, bringing new visitors every month without ads.</p>
+        <h3 class="serif text-4xl md:text-5xl mt-4 leading-tight">SEO blog content</h3>
+        <p class="mt-4 text-lg md:text-xl opacity-85 leading-relaxed">Articles your customers search for on Google, bringing new visitors to your store every month without ads.</p>
       </div>
     </div>
     <div class="md:col-span-2 flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16 py-14" style="border-top:1.5px solid var(--peach)">
-      <div class="relative shrink-0" style="width:min(100%,540px);height:300px">
-        <figure class="pola absolute bg-white" style="left:0;top:8%;width:66%;padding:12px 12px 12px;border-radius:8px;box-shadow:0 24px 44px -22px rgba(59,10,28,.45);transform:rotate(-4deg)">
-          <span class="tape" aria-hidden="true"></span>
-          <div style="background:#eef3ef;border-radius:4px;overflow:hidden"><img src="images/whatsapp-before.jpg" alt="WhatsApp button on Babylicious" loading="lazy" style="display:block;width:100%;height:auto"></div>
-        </figure>
-        <figure class="pola absolute bg-white" style="right:0;top:0;width:66%;padding:12px 12px 12px;border-radius:8px;box-shadow:0 24px 44px -22px rgba(59,10,28,.45);transform:rotate(3.5deg)">
-          <span class="tape" aria-hidden="true"></span>
-          <div style="background:#eef3ef;border-radius:4px;overflow:hidden"><img src="images/whatsapp-after.jpg" alt="WhatsApp chat opened from the store" loading="lazy" style="display:block;width:100%;height:auto"></div>
-        </figure>
-      </div>
-      <div class="max-w-md">
-        <p class="serif leading-none" style="color:var(--coral);font-size:clamp(4rem,8vw,6.5rem)">04</p>
-        <h3 class="serif text-4xl md:text-5xl mt-4 leading-tight">Instant WhatsApp Checkout</h3>
-        <p class="mt-4 text-lg md:text-xl opacity-85 leading-relaxed">A sticky, mobile-first WhatsApp button that lets hesitant buyers ask questions and order in one click.</p>
-      </div>
-    </div>
-    <div class="md:col-span-2 flex flex-col md:flex-row items-center gap-10 md:gap-16 py-14" style="border-top:1.5px solid var(--peach)">
       <figure class="pola relative bg-white shrink-0" style="width:min(100%,540px);padding:14px;border-radius:8px;box-shadow:0 24px 44px -22px rgba(59,10,28,.45);transform:rotate(2.5deg)">
         <span class="tape" aria-hidden="true"></span>
         <div style="background:#eef3ef;border-radius:4px;overflow:hidden"><img src="images/footer-whatsapp.jpg" alt="New Babylicious footer with Bestseller badges" loading="lazy" style="display:block;width:100%;height:auto"></div>
       </figure>
       <div class="max-w-md">
-        <p class="serif leading-none" style="color:var(--coral);font-size:clamp(4rem,8vw,6.5rem)">05</p>
-        <h3 class="serif text-4xl md:text-5xl mt-4 leading-tight">Footer & Bestseller badges</h3>
-        <p class="mt-4 text-lg md:text-xl opacity-85 leading-relaxed">A clearer footer with all the store info, and Bestseller badges that make top products stand out.</p>
+        <p class="serif leading-none" style="color:var(--coral);font-size:clamp(4rem,8vw,6.5rem)">04</p>
+        <h3 class="serif text-4xl md:text-5xl mt-4 leading-tight">Details that build trust</h3>
+        <p class="mt-4 text-lg md:text-xl opacity-85 leading-relaxed">A clear footer, a WhatsApp button on every page and Bestseller badges that help visitors trust your store and buy.</p>
       </div>
     </div>
   </div>
@@ -231,7 +216,7 @@ body.has-cur,body.has-cur a,body.has-cur button{cursor:none}
         <h3 class="serif text-3xl">SEO & Sales Boost</h3>
         <p class="mt-3 text-sm opacity-60">One-time project</p>
         <ul class="tick mt-6 flex-1">
-          <li>3-4 SEO blog articles/month</li>
+          <li>3 SEO-optimized blog articles</li>
           <li>Meta titles, descriptions and Google indexing</li>
           <li>Internal links to your product pages</li>
           <li>“Bestseller” and urgency product badges</li>
