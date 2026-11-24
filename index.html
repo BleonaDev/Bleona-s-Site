@@ -13,6 +13,8 @@
 <!-- After deploying, replace with your full domain, e.g. https://yourdomain.com/og-image.jpg (1200x630) -->
 <meta property="og:image" content="https://YOUR-DOMAIN/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="sq" href="al.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&family=Caveat:wght@600&display=swap" rel="stylesheet">
@@ -71,6 +73,7 @@ body.has-cur,body.has-cur a,body.has-cur button{cursor:none}
 .pola:hover{transform:rotate(0) scale(1.04)!important;box-shadow:0 34px 60px -24px rgba(59,10,28,.55)!important}
 .tape{position:absolute;top:-14px;left:50%;width:120px;height:30px;margin-left:-60px;background:rgba(248,191,206,.85);transform:rotate(-3deg);border-radius:3px;box-shadow:0 2px 6px rgba(59,10,28,.12)}
 @media (max-width:767px){.arch,.ring{aspect-ratio:1/1}.arch img{object-position:center 12%}}
+.lang{display:inline-flex;border:2px solid var(--forest);border-radius:999px;overflow:hidden;font-size:.75rem;font-weight:700;background:#fff}.lang a{padding:.35rem .75rem;color:var(--forest)}
 </style>
 <noscript><style>.line{opacity:1!important;transform:none!important}</style></noscript>
 </head>
@@ -88,12 +91,13 @@ body.has-cur,body.has-cur a,body.has-cur button{cursor:none}
       <a href="#services" class="hover:text-[var(--coral)]">Services</a>
       <a href="https://www.instagram.com/bleonadigitalstudio/" target="_blank" rel="noopener" class="hover:text-[var(--coral)]">Instagram</a>
     </nav>
-    <a href="https://wa.me/355685491587" target="_blank" rel="noopener" class="btn text-white text-sm !py-2.5 !px-5" style="background:var(--green)">WhatsApp Me</a>
+    <div class="flex items-center gap-3"><div class="lang"><a href="al.html" hreflang="sq"  aria-label="Shqip">AL</a><a href="index.html" hreflang="en" style="background:var(--forest);color:#fff" aria-label="English">EN</a></div><a href="https://wa.me/355685491587" target="_blank" rel="noopener" class="btn text-white text-sm !py-2.5 !px-5" style="background:var(--green)">WhatsApp Me</a></div>
   </div>
 </header>
 
 <main id="top">
 <section id="intro" class="intro">
+  <div class="absolute right-5" style="top:5.5rem"><div class="lang"><a href="al.html" hreflang="sq"  aria-label="Shqip">AL</a><a href="index.html" hreflang="en" style="background:var(--forest);color:#fff" aria-label="English">EN</a></div></div>
   <div class="relative">
     <p class="wm">Bleona<br>Hitaj</p>
     <p class="mt-8 text-lg md:text-xl font-medium">WooCommerce & E-commerce Specialist</p>
@@ -201,7 +205,7 @@ body.has-cur,body.has-cur a,body.has-cur button{cursor:none}
 
   <div class="mt-6 flex flex-wrap items-center justify-between gap-3 text-sm opacity-80">
     <p>Results from WooCommerce Analytics. Real screenshots are in the full case study.</p>
-    <a href="Case_Study_Babylicious.pdf" target="_blank" rel="noopener" class="font-bold underline underline-offset-4 decoration-2 hover:text-[var(--coral)]">Read the full case study (PDF)</a>
+    <a href="Case_Study_Babylicious_EN.pdf" target="_blank" rel="noopener" class="font-bold underline underline-offset-4 decoration-2 hover:text-[var(--coral)]">Read the full case study (PDF)</a>
     <a href="https://babylicious.al" target="_blank" rel="noopener" class="font-bold underline underline-offset-4 decoration-2 hover:text-[var(--coral)]">Visit the live store</a>
   </div>
 </section>
@@ -259,7 +263,7 @@ body.has-cur,body.has-cur a,body.has-cur button{cursor:none}
 <section id="about" class="max-w-6xl mx-auto px-5 py-24 grid md:grid-cols-[1fr_1.5fr] gap-12 items-start">
   <h2 class="serif h-lg">Hi, I’m <span class="blk" style="background:var(--coral);color:#fff">Bleona.</span></h2>
   <div class="max-w-2xl"><p class="serif text-2xl md:text-[1.7rem] leading-snug">I hold a Bachelor’s degree in Business Informatics and worked in an enterprise Agile team at Deloitte, building email campaigns in Salesforce Marketing Cloud. Today I manage live e-commerce stores, including product catalogs, plugins, SEO, email marketing and fixes. Everything I do is focused on reliability, speed and growing your business.</p>
-    <a href="Case_Study_Babylicious.pdf" target="_blank" rel="noopener" class="btn mt-8 border-2 hover:bg-[var(--forest)] hover:text-white" style="border-color:var(--forest)">Download my Case Study (PDF)</a></div>
+    <a href="Case_Study_Babylicious_EN.pdf" target="_blank" rel="noopener" class="btn mt-8 border-2 hover:bg-[var(--forest)] hover:text-white" style="border-color:var(--forest)">Download my Case Study (PDF)</a></div>
 </section>
 
 <section id="contact" class="px-3 sm:px-5 pb-5"><div class="relative overflow-hidden rounded-[40px] text-[var(--peach-l)]" style="background:var(--forest)">
